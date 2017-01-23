@@ -65,17 +65,7 @@ namespace PuzzlePrototype
             }
         }
 
-        private Color _color;
-        public Color Color
-        {
-            get { return _color; }
-            set
-            {
-                _color = value;
-                OnPropertyChanged();
-            }
-        }
-
+        public Color Color { get; set; }
         private static Random _random = new Random(DateTime.Now.Millisecond);
 
         public Block(int x, int y)
@@ -93,11 +83,6 @@ namespace PuzzlePrototype
         public override string ToString()
         {
             return $"({ X }, {Y}), { Color.ToString() }";
-        }
-
-        public object Clone()
-        {
-            return MemberwiseClone();
         }
     }
 }

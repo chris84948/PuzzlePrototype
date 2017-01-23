@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        xmlns:local="clr-namespace:PuzzlePrototype"
+            xmlns:local="clr-namespace:PuzzlePrototype"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="MainWindow"
         SizeToContent="WidthAndHeight"
@@ -17,25 +17,25 @@
 
     <Grid>
         <ItemsControl x:Name="GameGrid"
-                      ItemsSource="{Binding Blocks}">
+                        ItemsSource="{Binding Blocks}">
 
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <Canvas Width="{Binding Width}"
-                            Height="{Binding Height}"
-                            Background="#FF444444">
-                        <i:Interaction.Behaviors>
-                            <ei:FluidMoveBehavior AppliesTo="Children"
-                                                  Duration="0:0:0.5">
-                                <ei:FluidMoveBehavior.EaseY>
-                                    <SineEase EasingMode="EaseIn" />
-                                </ei:FluidMoveBehavior.EaseY>
-                                <ei:FluidMoveBehavior.EaseX>
-                                    <SineEase EasingMode="EaseIn" />
-                                </ei:FluidMoveBehavior.EaseX>
-                            </ei:FluidMoveBehavior>
-                        </i:Interaction.Behaviors>
-                    </Canvas>
+    <Canvas Width="{Binding Width}"
+            Height="{Binding Height}"
+            Background="#FF444444">
+        <i:Interaction.Behaviors>
+            <ei:FluidMoveBehavior AppliesTo="Children"
+                                    Duration="0:0:0.5">
+                <ei:FluidMoveBehavior.EaseY>
+                    <SineEase EasingMode="EaseIn" />
+                </ei:FluidMoveBehavior.EaseY>
+                <ei:FluidMoveBehavior.EaseX>
+                    <SineEase EasingMode="EaseIn" />
+                </ei:FluidMoveBehavior.EaseX>
+            </ei:FluidMoveBehavior>
+        </i:Interaction.Behaviors>
+    </Canvas>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
 
@@ -51,10 +51,10 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Rectangle Canvas.Left="{Binding Left}"
-                               Canvas.Bottom="{Binding Bottom}"
-                               Width="{Binding BlockSize}"
-                               Height="{Binding BlockSize}"
-                               Stroke="White">
+                                Canvas.Bottom="{Binding Bottom}"
+                                Width="{Binding BlockSize}"
+                                Height="{Binding BlockSize}"
+                                Stroke="White">
                         <Rectangle.Fill>
                             <SolidColorBrush Color="{Binding Color}" />
                         </Rectangle.Fill>
